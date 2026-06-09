@@ -1,0 +1,18 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-recess-order"
+  ],
+  "ignoreFiles": ["node_modules/**", ".next/**", "out/**", "build/**"],
+  "rules": {
+    "selector-class-pattern": [
+      "^[a-z][a-zA-Z0-9]*$",
+      { "message": "Expected class selector to be camelCase" }
+    ],
+    "custom-property-pattern": null,
+    "keyframes-name-pattern": null,
+    "no-descending-specificity": null,
+    "alpha-value-notation": "number",
+    "color-function-notation": "legacy"
+  }
+}
