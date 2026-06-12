@@ -1,0 +1,7 @@
+:global([data-mantine-color-scheme='light']) .sunIcon {
+  display: none;
+}
+
+:global([data-mantine-color-scheme='dark']) .moonIcon {
+  display: none;
+}
