@@ -1,0 +1,38 @@
+{
+  "auth": {
+    "panel": {
+      "tagline": "Your personal compendium of knowledge."
+    },
+    "signIn": {
+      "title": "Sign in",
+      "subtitle": "Welcome back",
+      "emailLabel": "Email",
+      "emailPlaceholder": "you@example.com",
+      "emailInvalid": "Enter a valid email",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Your password",
+      "passwordRequired": "Enter your password",
+      "submit": "Sign in",
+      "noAccount": "Don't have an account?",
+      "signUpLink": "Sign up",
+      "errorFallback": "Sign in failed"
+    },
+    "signUp": {
+      "title": "Create account",
+      "subtitle": "Start your journey",
+      "emailLabel": "Email",
+      "emailPlaceholder": "you@example.com",
+      "emailInvalid": "Enter a valid email",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Create a password",
+      "passwordRequired": "Password is required",
+      "confirmPasswordLabel": "Confirm password",
+      "confirmPasswordPlaceholder": "Repeat your password",
+      "submit": "Create account",
+      "hasAccount": "Already have an account?",
+      "signInLink": "Sign in",
+      "passwordMismatch": "Passwords do not match",
+      "errorFallback": "Sign up failed"
+    }
+  }
+}

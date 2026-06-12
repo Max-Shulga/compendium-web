@@ -86,7 +86,7 @@ export default defineConfig([
       'import/no-unused-modules': ['error', {
         unusedExports: true,
         // Next.js uses app/ entry files by convention, not by import
-        ignoreExports: ['**/app/**/*.{ts,tsx}', 'next.config.ts'],
+        ignoreExports: ['**/app/**/*.{ts,tsx}', 'next.config.ts', 'proxy.ts'],
       }],
       'import/prefer-default-export': 'error',
       'import/newline-after-import': 'error',

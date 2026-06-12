@@ -1,0 +1,38 @@
+{
+  "auth": {
+    "panel": {
+      "tagline": "Ваша личная библиотека знаний."
+    },
+    "signIn": {
+      "title": "Войти",
+      "subtitle": "С возвращением",
+      "emailLabel": "Email",
+      "emailPlaceholder": "вы@example.com",
+      "emailInvalid": "Введите корректный email",
+      "passwordLabel": "Пароль",
+      "passwordPlaceholder": "Ваш пароль",
+      "passwordRequired": "Введите пароль",
+      "submit": "Войти",
+      "noAccount": "Нет аккаунта?",
+      "signUpLink": "Зарегистрироваться",
+      "errorFallback": "Ошибка входа"
+    },
+    "signUp": {
+      "title": "Создать аккаунт",
+      "subtitle": "Начните свой путь",
+      "emailLabel": "Email",
+      "emailPlaceholder": "вы@example.com",
+      "emailInvalid": "Введите корректный email",
+      "passwordLabel": "Пароль",
+      "passwordPlaceholder": "Придумайте пароль",
+      "passwordRequired": "Пароль обязателен",
+      "confirmPasswordLabel": "Подтвердите пароль",
+      "confirmPasswordPlaceholder": "Повторите пароль",
+      "submit": "Создать аккаунт",
+      "hasAccount": "Уже есть аккаунт?",
+      "signInLink": "Войти",
+      "passwordMismatch": "Пароли не совпадают",
+      "errorFallback": "Ошибка регистрации"
+    }
+  }
+}

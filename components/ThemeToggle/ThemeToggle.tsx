@@ -1,6 +1,8 @@
 'use client';
 
-import { ActionIcon , useComputedColorScheme, useMantineColorScheme } from '@mantine/core';
+import { ActionIcon, useMantineColorScheme } from '@mantine/core';
+
+import classes from './ThemeToggle.module.css';
 
 const SunIcon = () => (
   <svg fill='none' height='20' stroke='currentColor'
@@ -26,7 +28,6 @@ const MoonIcon = () => (
 
 const ThemeToggle = () => {
   const { toggleColorScheme } = useMantineColorScheme();
-  const computed = useComputedColorScheme('light');
 
   return (
     <ActionIcon
@@ -35,7 +36,8 @@ const ThemeToggle = () => {
       variant='subtle'
       onClick={toggleColorScheme}
     >
-      {computed === 'dark' ? <SunIcon /> : <MoonIcon />}
+      <span className={classes.sunIcon}><SunIcon /></span>
+      <span className={classes.moonIcon}><MoonIcon /></span>
     </ActionIcon>
   );
 };

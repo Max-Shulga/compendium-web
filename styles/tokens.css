@@ -2,14 +2,16 @@
   --color-bg: #f8f6f2;
   --color-surface: #fff;
   --color-text: #1c1a17;
-  --color-accent: #2a9d8f;
-  --color-highlight: #e09a3e;
+  --color-accent: #5b44c9;
+  --color-highlight: #c97d28;
+  --color-border: #d4cfc6;
 }
 
 [data-mantine-color-scheme='dark'] {
   --color-bg: #1a1916;
   --color-surface: #242220;
   --color-text: #e8e5e0;
-  --color-accent: #3db5a7;
+  --color-accent: #8b78f0;
   --color-highlight: #e8a84e;
+  --color-border: #302e2a;
 }

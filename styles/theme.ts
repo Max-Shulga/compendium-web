@@ -4,11 +4,13 @@ const theme = createTheme({
   fontFamily: 'var(--font-inter), sans-serif',
   fontFamilyMonospace: 'ui-monospace, monospace',
   headings: {
-    fontFamily: 'var(--font-inter), sans-serif',
-    fontWeight: '600'
+    fontFamily: 'var(--font-lora), Georgia, serif',
+    fontWeight: '400'
   },
+  primaryColor: 'violet',
+  primaryShade: { light: 8, dark: 5 },
   cursorType: 'pointer',
-  defaultRadius: 'md',
+  defaultRadius: 'xs',
   focusRing: 'auto',
   fontSmoothing: false,
 
