@@ -1,5 +1,8 @@
 html {
   height: 100%;
+  font-family: var(--font-inter), sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-bg);
 }
 
 body {

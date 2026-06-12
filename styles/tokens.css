@@ -1,0 +1,15 @@
+:root {
+  --color-bg: #f8f6f2;
+  --color-surface: #fff;
+  --color-text: #1c1a17;
+  --color-accent: #2a9d8f;
+  --color-highlight: #e09a3e;
+}
+
+[data-mantine-color-scheme='dark'] {
+  --color-bg: #1a1916;
+  --color-surface: #242220;
+  --color-text: #e8e5e0;
+  --color-accent: #3db5a7;
+  --color-highlight: #e8a84e;
+}
