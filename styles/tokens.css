@@ -5,6 +5,9 @@
   --color-accent: #5b44c9;
   --color-highlight: #c97d28;
   --color-border: #d4cfc6;
+  --color-panel-bg: #1c1a17;
+  --color-panel-text-muted: #b8b3aa;
+  --color-shadow: rgb(0, 0, 0, 0.06);
 }
 
 [data-mantine-color-scheme='dark'] {
@@ -14,4 +17,15 @@
   --color-accent: #8b78f0;
   --color-highlight: #e8a84e;
   --color-border: #302e2a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-mantine-color-scheme='light']) {
+    --color-bg: #1a1916;
+    --color-surface: #242220;
+    --color-text: #e8e5e0;
+    --color-accent: #8b78f0;
+    --color-highlight: #e8a84e;
+    --color-border: #302e2a;
+  }
 }

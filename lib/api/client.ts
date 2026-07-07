@@ -1,9 +1,8 @@
-const API_URL =
-  (typeof window === 'undefined'
-    ? process.env.API_URL
-    : process.env.NEXT_PUBLIC_API_URL) ?? 'http://localhost:3000';
+import getAccessToken from '@/lib/auth/client';
 
-class ApiError extends Error {
+import { API_URL } from './constants/api.constant';
+
+export class ApiError extends Error {
   constructor(
     public readonly status: number,
     public readonly data: unknown,
@@ -15,20 +14,31 @@ class ApiError extends Error {
 }
 
 type RequestOptions = {
-  token?: string;
   body?: unknown;
 } & Omit<RequestInit, 'body'>
 
-async function apiRequest<T>(
+const resolveToken = async (): Promise<string | undefined> => {
+  if (typeof window === 'undefined') {
+    const { getServerToken } = await import('@/lib/auth/server');
+
+    return getServerToken();
+  }
+
+  return getAccessToken() || undefined;
+};
+
+const apiRequest = async <T>(
   path: string,
   options: RequestOptions = {}
-): Promise<T> {
-  const { token, body, headers: extraHeaders, ...fetchOptions } = options;
+): Promise<T> => {
+  const { body, headers: extraHeaders, ...fetchOptions } = options;
 
   const headers = new Headers(extraHeaders as HeadersInit);
   if (body !== undefined) {
     headers.set('Content-Type', 'application/json');
   }
+
+  const token = await resolveToken();
   if (token) {
     headers.set('Authorization', `Bearer ${token}`);
   }
@@ -50,6 +60,6 @@ async function apiRequest<T>(
   }
 
   return data as T;
-}
+};
 
-export default apiRequest ;
+export default apiRequest;

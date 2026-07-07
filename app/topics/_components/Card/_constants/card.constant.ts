@@ -1,0 +1,4 @@
+const CARD_TITLE_MAX = 200;
+const CARD_TEXT_MAX = 5000;
+
+export { CARD_TITLE_MAX, CARD_TEXT_MAX };
