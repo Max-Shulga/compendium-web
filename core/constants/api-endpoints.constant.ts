@@ -12,6 +12,11 @@ const API_ENDPOINTS = {
     list: '/topics',
     detail: (id: number | string) => `/topics/${id}`,
     cards: (id: number | string) => `/topics/${id}/cards`
+  },
+  categories: {
+    list: '/categories',
+    detail: (id: number | string) => `/categories/${id}`,
+    items: (id: number | string) => `/categories/${id}/items`
   }
 };
 
