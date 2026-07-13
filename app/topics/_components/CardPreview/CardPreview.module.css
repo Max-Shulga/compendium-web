@@ -1,0 +1,67 @@
+.row {
+  padding: 0.75rem 1rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+}
+
+.header {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.header:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+.chevron {
+  flex-shrink: 0;
+  opacity: 0.45;
+}
+
+.panel {
+  padding: 1rem 1.25rem;
+  margin-top: 0.5rem;
+  background: var(--color-bg);
+  border: 1px dashed var(--color-border);
+  border-radius: 6px;
+}
+
+.text {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  opacity: 0.75;
+}
+
+.examplesLabel {
+  margin: 0.875rem 0 0.25rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.45;
+}
+
+.examples {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  opacity: 0.65;
+}

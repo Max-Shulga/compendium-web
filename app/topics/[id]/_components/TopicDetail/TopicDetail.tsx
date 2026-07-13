@@ -1,6 +1,7 @@
 import { Title } from '@mantine/core';
 import Link from 'next/link';
 
+import CardPreview from '@/app/topics/_components/CardPreview/CardPreview';
 import { ROUTES } from '@/core/constants/routes.constant';
 
 import type { TTopicDetail } from './models/topic-detail.model';
@@ -34,12 +35,7 @@ const TopicDetail = ({ topic }: TTopicDetail) => {
           </div>
           <div className={styles.cardList}>
             {cards.map((topicCard) => (
-              <div className={styles.cardItem} key={topicCard.id}>
-                <p className={styles.cardTitle}>{topicCard.card.title}</p>
-                {topicCard.card.text && (
-                  <p className={styles.cardPreview}>{topicCard.card.text}</p>
-                )}
-              </div>
+              <CardPreview card={topicCard.card} key={topicCard.id} />
             ))}
           </div>
         </section>

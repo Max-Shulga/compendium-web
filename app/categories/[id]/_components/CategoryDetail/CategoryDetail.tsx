@@ -1,11 +1,11 @@
 import { Title } from '@mantine/core';
 import Link from 'next/link';
 
+import CategoryItem from '@/app/categories/[id]/_components/CategoryItem/CategoryItem';
 import { ROUTES } from '@/core/constants/routes.constant';
 
 import styles from './CategoryDetail.module.css';
 import type { TCategoryDetail } from './models/category-detail.model';
-import renderCategoryItem from './utils/renderCategoryItem.util';
 
 const CategoryDetail = ({ category }: TCategoryDetail) => {
   const items = category.categoryItems ?? [];
@@ -33,9 +33,7 @@ const CategoryDetail = ({ category }: TCategoryDetail) => {
             <span className={styles.itemCount}>{items.length}</span>
           </div>
           <div className={styles.itemList}>
-            {items.map((item) => (
-              <div key={item.id}>{renderCategoryItem(item)}</div>
-            ))}
+            {items.map((item) => <CategoryItem item={item} key={item.id} />)}
           </div>
         </section>
       )}

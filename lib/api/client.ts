@@ -17,12 +17,8 @@ type RequestOptions = {
   body?: unknown;
 } & Omit<RequestInit, 'body'>
 
-const resolveToken = async (): Promise<string | undefined> => {
-  if (typeof window === 'undefined') {
-    const { getServerToken } = await import('@/lib/auth/server');
-
-    return getServerToken();
-  }
+const resolveToken = (): string | undefined => {
+  if (typeof window === 'undefined') return undefined;
 
   return getAccessToken() || undefined;
 };
@@ -38,7 +34,7 @@ const apiRequest = async <T>(
     headers.set('Content-Type', 'application/json');
   }
 
-  const token = await resolveToken();
+  const token = resolveToken();
   if (token) {
     headers.set('Authorization', `Bearer ${token}`);
   }
