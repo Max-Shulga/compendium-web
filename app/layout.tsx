@@ -6,11 +6,12 @@ export const metadata: Metadata = {
   description: 'Compendium'
 };
 
-import Header from './_components/Header';
 
 import QueryProvider from '@/lib/query/QueryProvider';
 import { inter, lora } from '@/styles/fonts';
 import theme from '@/styles/theme';
+
+import Header from './_components/Header';
 
 import '@mantine/core/styles.css';
 import 'normalize.css';
