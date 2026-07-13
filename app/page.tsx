@@ -1,9 +1,11 @@
-import Header from './_components/Header';
+import { topicsApi } from '@/app/topics/api';
 
-const HomePage = () => (
-  <main>
-    <Header />
-  </main>
-);
+import Home from './_components/Home/Home';
+
+const HomePage = async () => {
+  const topics = await topicsApi.getAll();
+
+  return <Home topics={topics} />;
+};
 
 export default HomePage;
