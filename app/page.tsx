@@ -1,10 +1,8 @@
-import Logo from '@/components/Logo';
-import ThemeToggle from '@/components/ThemeToggle';
+import Header from './_components/Header';
 
 const HomePage = () => (
   <main>
-    <Logo />
-    <ThemeToggle />
+    <Header />
   </main>
 );
 

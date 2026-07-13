@@ -40,4 +40,9 @@ const requireRole = async (role: Role): Promise<string> => {
   return token;
 };
 
-export { requireToken, requireRole, getServerToken, Role };
+const redirectIfAuthenticated = async (): Promise<void> => {
+  const token = await getServerToken();
+  if (token) redirect(ROUTES.home);
+};
+
+export { requireToken, requireRole, redirectIfAuthenticated, Role };

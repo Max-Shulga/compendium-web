@@ -7,12 +7,15 @@ import type {
 import { API_ENDPOINTS } from '@/core/constants/api-endpoints.constant';
 import type { TPaginationQuery } from '@/core/models/paginationQuery.model';
 import buildSearch from '@/core/utils/buildSearch.util';
+import orEmptyArray from '@/core/utils/orEmptyArray.util';
 import apiRequest from '@/lib/api/client';
 import { HTTP_METHODS } from '@/lib/api/constants/api.constant';
 
 const categoriesApi = {
   getAll: (query?: TPaginationQuery): Promise<TCategory[]> =>
-    apiRequest(`${API_ENDPOINTS.categories.list}${buildSearch(query)}`),
+    apiRequest<TCategory[]>(`${API_ENDPOINTS.categories.list}${buildSearch(query)}`)
+      .then(orEmptyArray)
+      .catch(() => []),
 
   getOne: (id: number): Promise<TCategory> =>
     apiRequest(API_ENDPOINTS.categories.detail(id)),

@@ -1,0 +1,13 @@
+.icon {
+  transition: transform 0.12s ease;
+}
+
+.expanded {
+  transform: rotate(90deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .icon {
+    transition: none;
+  }
+}
