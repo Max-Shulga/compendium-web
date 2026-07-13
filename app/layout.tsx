@@ -6,6 +6,8 @@ export const metadata: Metadata = {
   description: 'Compendium'
 };
 
+import Header from './_components/Header';
+
 import QueryProvider from '@/lib/query/QueryProvider';
 import { inter, lora } from '@/styles/fonts';
 import theme from '@/styles/theme';
@@ -22,7 +24,10 @@ const RootLayout = ({ children }: TRootLayout) => (
   <html suppressHydrationWarning className={`${inter.variable} ${lora.variable}`}>
     <body suppressHydrationWarning>
       <MantineProvider defaultColorScheme='auto' theme={theme}>
-        <QueryProvider>{children}</QueryProvider>
+        <QueryProvider>
+          <Header />
+          {children}
+        </QueryProvider>
       </MantineProvider>
     </body>
   </html>
