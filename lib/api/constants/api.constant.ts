@@ -4,6 +4,7 @@ const API_URL =
     : process.env.NEXT_PUBLIC_API_URL) ?? 'http://localhost:3000';
 
 const HTTP_NOT_FOUND = 404;
+const HTTP_UNAUTHORIZED = 401;
 
 const HTTP_METHODS = {
   get: 'GET',
@@ -16,5 +17,6 @@ const HTTP_METHODS = {
 export {
   API_URL,
   HTTP_NOT_FOUND,
+  HTTP_UNAUTHORIZED,
   HTTP_METHODS
 };

@@ -16,8 +16,10 @@
   opacity: 0.4;
 }
 
-.actions {
-  display: flex;
-  gap: 0.75rem;
-  justify-content: flex-end;
+.newItemPanel {
+  padding: 1rem 1.25rem;
+  margin-top: 0.5rem;
+  background: var(--color-bg);
+  border: 1px dashed var(--color-border);
+  border-radius: 6px;
 }

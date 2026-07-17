@@ -45,4 +45,4 @@ const redirectIfAuthenticated = async (): Promise<void> => {
   if (token) redirect(ROUTES.home);
 };
 
-export { requireToken, requireRole, redirectIfAuthenticated, Role };
+export { requireToken, requireRole, redirectIfAuthenticated, decodeAccessToken, Role };
