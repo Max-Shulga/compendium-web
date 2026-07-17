@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
+import AuthMenu from '@/components/AuthMenu';
 import Logo from '@/components/Logo';
 import ThemeToggle from '@/components/ThemeToggle';
 import { ROUTES } from '@/core/constants/routes.constant';
@@ -26,7 +27,10 @@ const Header = () => {
           <Link className={classes.link} href={ROUTES.topics.list}>Topics</Link>
           <Link className={classes.link} href={ROUTES.categories.list}>Categories</Link>
         </nav>
-        <ThemeToggle />
+        <div className={classes.actions}>
+          <ThemeToggle />
+          <AuthMenu />
+        </div>
       </div>
     </header>
   );
