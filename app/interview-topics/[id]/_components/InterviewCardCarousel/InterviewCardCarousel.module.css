@@ -173,24 +173,28 @@
 
 @media (width <= 640px) {
   .wrapper {
+    flex: 1;
     width: 100vw;
-    min-height: calc(100dvh - 11rem);
+    min-height: 0;
     margin-inline: calc(50% - 50vw);
   }
 
   .stage {
     position: relative;
+    flex: 1;
     gap: 0;
-    height: 100%;
-    min-height: calc(100dvh - 11rem);
+    align-items: stretch;
+    min-height: 0;
   }
 
   .navButton {
     position: absolute;
+    top: 50%;
     z-index: 3;
     width: 2rem;
     height: 2rem;
     opacity: 0.85;
+    transform: translateY(-50%);
   }
 
   .navButton:first-child {
@@ -204,12 +208,12 @@
   .deck {
     width: 100%;
     max-width: none;
-    height: 100%;
     aspect-ratio: unset;
     padding: 0 0.5rem;
   }
 
   .card {
+    width: 100%;
     height: 100%;
     aspect-ratio: unset;
   }

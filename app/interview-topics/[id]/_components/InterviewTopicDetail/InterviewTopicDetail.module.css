@@ -98,6 +98,16 @@
 
 @media (width <= 640px) {
   .page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
     padding: 1.5rem 1rem;
+  }
+
+  .cardsSection {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 0;
   }
 }
