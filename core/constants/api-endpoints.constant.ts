@@ -13,6 +13,14 @@ const API_ENDPOINTS = {
     detail: (id: number | string) => `/topics/${id}`,
     cards: (id: number | string) => `/topics/${id}/cards`
   },
+  interviewTopics: {
+    list: '/interview-topics',
+    detail: (id: number | string) => `/interview-topics/${id}`
+  },
+  interviewCards: {
+    list: '/interview-cards',
+    detail: (id: number | string) => `/interview-cards/${id}`
+  },
   categories: {
     list: '/categories',
     detail: (id: number | string) => `/categories/${id}`,
