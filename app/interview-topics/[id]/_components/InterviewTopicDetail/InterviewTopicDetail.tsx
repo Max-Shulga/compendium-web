@@ -29,7 +29,7 @@ const InterviewTopicDetail = ({ topic }: TInterviewTopicDetail) => {
       </nav>
 
       <Title order={1} style={{ fontWeight: 400 }}>{topic.title}</Title>
-      {topic.description && (
+      {viewMode !== VIEW_MODES.carousel && topic.description && (
         <p className={styles.description}>{topic.description}</p>
       )}
 

@@ -73,6 +73,7 @@ const apiRequest = async <T>(
   const headers = buildHeaders(extraHeaders, body !== undefined, token);
 
   const response = await fetch(`${API_URL}${path}`, {
+    cache: 'no-store',
     ...fetchOptions,
     headers,
     body: body !== undefined ? JSON.stringify(body) : undefined
