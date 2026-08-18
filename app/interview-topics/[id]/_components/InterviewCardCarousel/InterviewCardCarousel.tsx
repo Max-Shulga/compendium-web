@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import styles from './InterviewCardCarousel.module.css';
 import type { TInterviewCardCarousel } from './models/interview-card-carousel.model';
@@ -8,10 +8,17 @@ import type { TInterviewCardCarousel } from './models/interview-card-carousel.mo
 const InterviewCardCarousel = ({ cards }: TInterviewCardCarousel) => {
   const [index, setIndex] = useState(0);
   const [revealed, setRevealed] = useState(false);
+  const answerRef = useRef<HTMLSpanElement>(null);
 
   const card = cards[index];
   const isFirst = index === 0;
   const isLast = index === cards.length - 1;
+
+  useEffect(() => {
+    if (answerRef.current) {
+      answerRef.current.scrollTop = 0;
+    }
+  }, [index]);
 
   const handlePrev = () => {
     if (isFirst) return;
@@ -67,7 +74,7 @@ const InterviewCardCarousel = ({ cards }: TInterviewCardCarousel) => {
             </span>
             <span aria-hidden={!revealed} className={`${styles.face} ${styles.faceBack}`}>
               <span className={styles.answerLabel}>Answer</span>
-              <span className={styles.answer}>{card.text}</span>
+              <span className={styles.answer} ref={answerRef}>{card.text}</span>
               <span className={styles.hint}>Tap to hide</span>
             </span>
           </button>

@@ -58,7 +58,7 @@
   position: relative;
   flex: 1;
   min-width: 0;
-  max-width: 30rem;
+  max-width: 51rem;
   perspective: 1400px;
 }
 
@@ -172,21 +172,46 @@
 }
 
 @media (width <= 640px) {
+  .wrapper {
+    width: 100vw;
+    min-height: calc(100dvh - 11rem);
+    margin-inline: calc(50% - 50vw);
+  }
+
   .stage {
-    gap: 0.625rem;
+    position: relative;
+    gap: 0;
+    height: 100%;
+    min-height: calc(100dvh - 11rem);
   }
 
   .navButton {
-    width: 1.875rem;
-    height: 1.875rem;
+    position: absolute;
+    z-index: 3;
+    width: 2rem;
+    height: 2rem;
+    opacity: 0.85;
+  }
+
+  .navButton:first-child {
+    left: 0.5rem;
+  }
+
+  .navButton:last-child {
+    right: 0.5rem;
   }
 
   .deck {
-    aspect-ratio: 4 / 5;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    aspect-ratio: unset;
+    padding: 0 0.5rem;
   }
 
   .card {
-    aspect-ratio: 4 / 5;
+    height: 100%;
+    aspect-ratio: unset;
   }
 
   .face {
