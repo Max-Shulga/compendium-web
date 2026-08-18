@@ -26,6 +26,7 @@ const Header = () => {
         <nav aria-label='Primary' className={classes.nav}>
           <Link className={classes.link} href={ROUTES.topics.list}>Topics</Link>
           <Link className={classes.link} href={ROUTES.categories.list}>Categories</Link>
+          <Link className={classes.link} href={ROUTES.interviewTopics.list}>Interview</Link>
         </nav>
         <div className={classes.actions}>
           <ThemeToggle />
